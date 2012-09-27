@@ -1,0 +1,17 @@
+		.nav
+			.container
+				ul.menu
+					li.active	
+						a(href='/') Home
+					li.active	
+						a(href='/2nd') Test
+					li.active	
+						a(href='/the-story') The Story of PMF
+					li.active	
+						a(href='/look-see') Lets have a look-see
+					li.active	
+						a(href='/enter-your-own') Enter your Own!
+					li.active	
+						a(href='/shoot-me') Shoot Me Email
+					li.active	
+						a(href='/admin') Administration

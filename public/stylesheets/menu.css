@@ -1,0 +1,59 @@
+.nav {
+  width: 1024px;
+  height: 61px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(229,243,255)), to(rgb(5,138,255)));
+  background: -moz-linear-gradient(top, rgb(229,243,255), rgb(5,138,255));
+  position: relative;
+  margin-bottom: 30px;
+  float: left;}
+
+.container {
+  margin: 0 auto;
+  float: left;
+  clear: both;}
+
+.menu {
+  height: 61px;
+  border-left: 1px solid rgba(0,0,0,0.3);
+  border-right: 1px solid rgba(255,255,255,0.3);
+  float: left;}
+
+.nav a {
+  text-decoration: none;
+  color: #363636;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;}
+
+ul.menu {
+  margin: 0;
+  padding: 0;}
+
+ul.menu li {
+  list-style: none;
+  float: left;
+  height: 61px;
+  text-align: center;
+  background: -webkit-gradient(radial, 50% 100%, 10, 50% 50%, 90, from(rgba(221,255,212,1)), to(rgba(0,130,0, 1)));
+  background: -moz-radial-gradient(center 80px 45deg, circle cover, rgba(221,255,212,1) 0%, rgba(0,130,0, 1) 100%);}
+
+ul.menu li a {
+  display: block;
+  padding: 0 20px;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  line-height: 61px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(221,255,212)), to(rgb(0,130,0)));
+  background: -moz-linear-gradient(top, rgb(221,255,212), rgb(0,130,0));
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 700ms;
+  -moz-transition-property: background;
+  -moz-transition-duration: 700ms;}
+
+ul.menu li a:hover {
+  background: transparent none;}
+
+ul.menu li.active a {
+  background: -webkit-gradient(radial, 50% 100%, 10, 50% 50%, 90, from(rgba(255,255,212,1)), to(rgba(5,138,255, 1)));
+  background: -moz-radial-gradient(center 80px 45deg, circle cover, rgba(255,255,212,1) 0%, rgba(5,138,255, 1) 100%);}
