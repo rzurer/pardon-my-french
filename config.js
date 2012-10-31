@@ -1,23 +1,26 @@
-function configure(webServer, express, baseDir) {
-  webServer.configure(function() {
-    var pub = baseDir + '/public';
-    webServer.set('views', baseDir + '/views');
-    webServer.set('view engine', 'jade');
-    webServer.use(express.bodyParser());
-    webServer.use(express.logger());
-    webServer.use(express.methodOverride());
-    webServer.use(webServer.router);
-    webServer.use(express.compiler({
-      src: baseDir + '/public',
-      enable: ['sass']
-    }));
-    webServer.use(express.static(pub));
-  });
-
-  webServer.configure('development', function() {
-    webServer.use(express.errorHandler({
-      dumpExceptions: true
-    }));
-  });
+'use strict';
+function configure(app, express, flash) {
+    app.configure(function () {
+        var pub, bundle;
+        pub = __dirname + '/public';
+        app.set('views', __dirname + '/views');
+        app.set('view engine', 'jade');
+        app.set('view cache');
+        app.use(express.bodyParser());
+        app.use(express.cookieParser());
+        app.use(express.session({ secret: "keyboard cat" }));
+        app.use(flash());
+        app.use(express.logger());
+        app.use(express.methodOverride());
+        app.use(app.router);
+        app.use(function (req, res, next) {
+            res.header('Cache-Control', "max-age=31557600000, public");
+            next();
+        });
+        app.use(express.static(pub));
+    });
+    app.configure('development', function () {
+        app.use(express.errorHandler({dumpExceptions: true}));
+    });
 }
 exports.configure = configure;

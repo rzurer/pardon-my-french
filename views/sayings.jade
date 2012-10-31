@@ -1,9 +1,11 @@
-.enter-your-own
-	h2 Ok hot shot, do your worst!
-	form(method="POST", action="/saveSaying")
-		input(type='text', name='text', value=newSaying.text || '')
-		input(type='hidden', name='id', value=newSaying._id)
-		input(type='submit', value='Save')
-	.all-sayings
-		!= partial('_saying', sayings)
+extends layout
+block content
+	.enter-your-own
+		h2 Ok hot shot, do your worst!
+		form(method="POST", action="/saveSaying")
+			input(type='text', name='text', value=newSaying.text || '')
+			input(type='hidden', name='id', value=newSaying._id)
+			input(type='submit', value='Save')
+		.all-sayings
+			include _saying
 

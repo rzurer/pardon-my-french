@@ -1,0 +1,17 @@
+{
+  "name": "pardon-my-french",
+  "subdomain": "bzurer.pardon-my-french",
+  "scripts": {
+    "start": "app.js"
+  },
+  "version": "0.0.0-4",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "connect-flash": "*"
+  }
+}

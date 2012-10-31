@@ -1,2 +1,3 @@
-.saying(id=saying._id || '')
-	span #{saying.text || ''}
+each saying in sayings
+	.saying(id=saying._id || '')
+		span #{saying.text || ''}

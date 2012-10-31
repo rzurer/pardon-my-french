@@ -1,18 +1,17 @@
-!!! 5
 html
 	head
 		title Pardon My French!
-		link(rel="stylesheet", href="/stylesheets/pmf.css")
-		link(rel="stylesheet", href="/stylesheets/menu.css")
-	body 
-		.nav
-			.container
-				ul.menu
-					li.active	
-						a(href='/') Home
-					li	
-						a(href='/sayings') Let's have a look-see hmmm?!
-			.email
+		include _css
+body		
+	.nav
+		.container
+			ul.menu
+				li.active	
+					a(href='/') Home
+				li	
+					a(href='/sayings') Let's have a look-see hmmm?!
+		.email
+			a(href='mailto:ezurer@gmail.com', target='_blank')
 				input(type='image', src='/images/mail-icon.png', width=55, title='Shoot me an email!')
-					a(href='mailto:ezurer@gmail.com')
-	.content!= body
+		.content
+			block content
